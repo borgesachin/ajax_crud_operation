@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Bootstrap form</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap.js"></script>
+</head>
+<body>
+	<div class="container">
+		<form class="col-md-6"><br><br>
+			<div class="form-group">
+				<label>Username:</label>
+				<input type="text" name="username" class="form-control" placeholder="Username" id="username" required="">
+			</div>
+			<div class="form-group">
+				<label>Password:</label>
+				<input type="text" name="password" class="form-control" placeholder="Password" id="password" required="">
+			</div>
+			<div class="form-group">
+				<label>Contact:</label>
+				<input type="text" name="contact" class="form-control" placeholder="Contact" id="contact" required="">
+			</div>
+			<button type="button" class="btn btn-primary" value="submit" onclick="myfunction()">Submit</button>
+		</form>
+	</div>
+	<script type="text/javascript">
+		function myfunction(){
+			var name = document.getElementById('username').value;
+			var pass = document.getElementById('password').value;
+			var cont = document.getElementById('contact').value;
+			document.write(name + "<br>" + pass + "<br>" + cont);
+		}	
+	</script>
+</body>
+</html>

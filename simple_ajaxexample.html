@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		ajax tutorial
+	</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap.js"></script>
+</head>
+<body>
+	<div class="container">		
+		<div id="demo">
+			<h1>This heading going to be change.</h1>
+			<button type="button" class="btn btn-primary" onclick="myfunction()">Click me</button>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function myfunction(){
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function(){
+				if(this.readyState == 4 && this.status == 200){
+					document.getElementById('demo').innerHTML = this.responseText;
+				}
+			};
+			xhttp.open('GET','text.html',true);
+			xhttp.send();
+		}
+
+	</script>
+</body>
+</html>
